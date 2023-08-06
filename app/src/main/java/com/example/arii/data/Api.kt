@@ -1,9 +1,9 @@
 package com.example.arii.data
 
+import com.example.arii.data.pokemon.network.PokemonResponse
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -31,9 +31,8 @@ object Api {
 
     interface RemoteService{
        // Se puede hacer de esta forma: @GET("pokemon?limit=151") o usando los parametros de retrofit en la query
-
         @GET("pokemon")
-        fun loadPokemon(@Query("limit") limit:Int): Call<PokemonResponse>
+        fun loadPokemon(@Query("limit") limit:Int): PokemonResponse
     }
 
     //CREO UNA FUNCIONAR PARA DELVOLVER LA INFORMACION QUE TRAE RemoteService
