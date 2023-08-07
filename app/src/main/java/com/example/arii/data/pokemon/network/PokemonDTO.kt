@@ -1,4 +1,6 @@
-package com.example.arii.data
+package com.example.arii.data.pokemon.network
+
+import com.example.arii.domain.models.Pokemon
 
 //ESTA CLASE SE CREA PARA MAPEAR LOS PARAMETROS DEL WS
 
@@ -8,5 +10,3 @@ data class PokemonResponse(
     val previous:String,
     val results:List<Pokemon>
 )
-
-data class Pokemon(val name:String, val url:String)
